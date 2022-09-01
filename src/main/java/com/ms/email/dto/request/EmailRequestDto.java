@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -16,9 +17,7 @@ public class EmailRequestDto {
     @Email
     @NotBlank
     private String emailFrom;
-    @Email
-    @NotBlank
-    private String emailTo;
+    private List<@Email @NotBlank String> emailTo;
     @NotBlank
     private String subject;
     @NotBlank

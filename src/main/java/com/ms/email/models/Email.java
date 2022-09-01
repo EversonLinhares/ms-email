@@ -1,5 +1,6 @@
 package com.ms.email.models;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.ms.email.enums.StatusEmailEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Builder
@@ -25,7 +27,9 @@ public class Email implements Serializable {
     private UUID id;
     private String ownerRef;
     private String emailFrom;
-    private String emailTo;
+    @JsonSerialize
+    @ElementCollection
+    private List<String> emailTo;
     private String subject;
     @Column(columnDefinition = "TEXT")
     private String text;

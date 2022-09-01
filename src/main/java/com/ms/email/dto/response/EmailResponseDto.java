@@ -4,6 +4,7 @@ import com.ms.email.enums.StatusEmailEnum;
 import lombok.Data;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.util.List;
 
 @Data
 public class EmailResponseDto {
@@ -13,9 +14,7 @@ public class EmailResponseDto {
     @Email
     @NotBlank
     private String emailFrom;
-    @Email
-    @NotBlank
-    private String emailTo;
+    private List<String> emailTo;
     @NotBlank
     private String subject;
     @NotBlank
