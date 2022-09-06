@@ -23,6 +23,7 @@ public class EmailController {
     private final EmailService emailService;
     private final ModelMapper modelMapper;
 
+
     @PostMapping
     public ResponseEntity<EmailResponseDto> sendingEmail(@RequestBody @Valid EmailRequestDto emailRequestDto){
         Email email = new Email();

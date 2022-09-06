@@ -8,3 +8,11 @@ services:
       MYSQL_DATABASE: root
     ports:
       - "3307:3306"
+
+rabbitmq:
+    image: rabbitmq:management
+    restart: no
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
