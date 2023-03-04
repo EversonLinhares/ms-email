@@ -1,4 +1,4 @@
-package com.ms.email.controllers.exception;
+package com.ms.email.api.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

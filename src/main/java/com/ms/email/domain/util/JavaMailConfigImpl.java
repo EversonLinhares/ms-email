@@ -1,4 +1,4 @@
-package com.ms.email.util;
+package com.ms.email.domain.util;
 
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;

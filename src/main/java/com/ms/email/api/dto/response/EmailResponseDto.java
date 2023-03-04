@@ -1,6 +1,6 @@
-package com.ms.email.dto.response;
+package com.ms.email.api.dto.response;
 
-import com.ms.email.enums.StatusEmailEnum;
+import com.ms.email.domain.enums.StatusEmailEnum;
 import lombok.Data;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

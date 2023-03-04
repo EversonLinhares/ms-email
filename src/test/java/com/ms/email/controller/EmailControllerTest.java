@@ -1,6 +1,7 @@
-package com.ms.email.controllers;
+package com.ms.email.controller;
 
-import com.ms.email.services.EmailService;
+import com.ms.email.api.controller.EmailController;
+import com.ms.email.domain.services.EmailService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -9,7 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 class EmailControllerTest {

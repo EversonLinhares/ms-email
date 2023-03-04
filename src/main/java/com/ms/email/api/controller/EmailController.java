@@ -1,9 +1,9 @@
-package com.ms.email.controllers;
+package com.ms.email.api.controller;
 
-import com.ms.email.dto.request.EmailRequestDto;
-import com.ms.email.dto.response.EmailResponseDto;
-import com.ms.email.models.Email;
-import com.ms.email.services.EmailService;
+import com.ms.email.api.dto.request.EmailRequestDto;
+import com.ms.email.api.dto.response.EmailResponseDto;
+import com.ms.email.domain.model.Email;
+import com.ms.email.domain.services.EmailService;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.BeanUtils;

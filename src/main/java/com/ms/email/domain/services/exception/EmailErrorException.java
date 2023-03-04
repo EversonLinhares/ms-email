@@ -1,4 +1,4 @@
-package com.ms.email.services.exception;
+package com.ms.email.domain.services.exception;
 
 public class EmailErrorException extends RuntimeException{
 

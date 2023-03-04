@@ -1,6 +1,6 @@
-package com.ms.email.models;
+package com.ms.email.domain.model;
 
-import com.ms.email.enums.StatusSmtpEnum;
+import com.ms.email.domain.enums.StatusSmtpEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

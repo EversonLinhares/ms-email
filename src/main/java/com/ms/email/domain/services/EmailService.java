@@ -1,12 +1,12 @@
-package com.ms.email.services;
+package com.ms.email.domain.services;
 
-import com.ms.email.enums.StatusEmailEnum;
-import com.ms.email.models.Email;
-import com.ms.email.models.Smtp;
-import com.ms.email.repositories.EmailRepository;
-import com.ms.email.repositories.SmtpRepository;
-import com.ms.email.services.exception.EmailErrorException;
-import com.ms.email.util.JavaMailConfigImpl;
+import com.ms.email.domain.enums.StatusEmailEnum;
+import com.ms.email.domain.model.Email;
+import com.ms.email.domain.model.Smtp;
+import com.ms.email.domain.repository.EmailRepository;
+import com.ms.email.domain.repository.SmtpRepository;
+import com.ms.email.domain.services.exception.EmailErrorException;
+import com.ms.email.domain.util.JavaMailConfigImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -14,7 +14,9 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import java.io.UnsupportedEncodingException;
 import java.time.ZonedDateTime;
+import javax.mail.internet.InternetAddress;
 
 @Service
 @AllArgsConstructor
@@ -38,6 +40,11 @@ public class EmailService {
             String [] to = email.getEmailTo().stream().toArray(String []::new);
             MimeMessage mimeMessage = javaMail.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(mimeMessage);
+            if(email.getEmailFrom().isEmpty()){
+                helper.setFrom(smtpBanco.getMail_from());
+            }else{
+                helper.setFrom(new InternetAddress(smtpBanco.getMail_from(),email.getEmailFrom()));
+            }
             helper.setFrom(email.getEmailFrom());
             helper.setTo(to);
             helper.setSubject(email.getSubject());
@@ -45,7 +52,7 @@ public class EmailService {
             javaMail.send(mimeMessage);
             email.setStatusEmail(StatusEmailEnum.SENT);
         }
-        catch (MessagingException | MailException e){
+        catch (MessagingException | MailException | UnsupportedEncodingException e){
             e.printStackTrace();
             email.setStatusEmail(StatusEmailEnum.ERROR);
             throw new EmailErrorException("Não foi possível realizar o envio de email tente mais tarde!");

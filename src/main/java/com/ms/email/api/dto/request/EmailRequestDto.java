@@ -1,4 +1,4 @@
-package com.ms.email.dto.request;
+package com.ms.email.api.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +15,6 @@ public class EmailRequestDto {
     @NotBlank
     private String ownerRef;
     @Email
-    @NotBlank
     private String emailFrom;
     private List<@Email @NotBlank String> emailTo;
     @NotBlank

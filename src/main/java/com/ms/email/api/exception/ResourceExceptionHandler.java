@@ -1,6 +1,6 @@
-package com.ms.email.controllers.exception;
+package com.ms.email.api.exception;
 
-import com.ms.email.services.exception.EmailErrorException;
+import com.ms.email.domain.services.exception.EmailErrorException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -1,7 +1,7 @@
-package com.ms.email.models;
+package com.ms.email.domain.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.ms.email.enums.StatusEmailEnum;
+import com.ms.email.domain.enums.StatusEmailEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
