@@ -17,7 +17,7 @@
  </ul>
 
 ## Endpoint
-<li>Rodando aplicação local exemplos: Podendo ser utilizado postman ou insomnia para realizar as requisições</li>
+ <li>Rodando aplicação local exemplos: Podendo ser utilizado postman ou insomnia para realizar as requisições</li>
 <ul>
  <li>Enviar Email: <a href="url">http://localhost:8080/email </a> </li>
  <li>Example Json: <br/>
