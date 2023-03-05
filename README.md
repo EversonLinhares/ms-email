@@ -2,6 +2,7 @@
 
 ## Requisitos para rodar a aplicação
  . Java 11
+  <br/>
  . RabbitMQ versão utilizada 3.10.7
  . Smtp para configurar no banco de dados
 
