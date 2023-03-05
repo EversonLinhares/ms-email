@@ -17,9 +17,9 @@
  </ul>
 
 ## Endpoint
-<ul>Rodando aplicação local exemplos: Podendo ser utilizado postman ou insomnia para realizar as requisições</ul>
+<li>Rodando aplicação local exemplos: Podendo ser utilizado postman ou insomnia para realizar as requisições</li>
 <ul>
- <li> Post: Enviar Email: http://localhost:8080/email</li>
+ <li>Enviar Email: <a href="url">http://localhost:8080/email </a> </li>
  <li>Example Json: <br/>
   {
 	"ownerRef": "Everson",
@@ -33,6 +33,6 @@
   }
  </li>
  <br/>
- <li> Get : Pesquisar Smtp: http://localhost:8080/smtp</li>
+ <li> Pesquisar Smtp: <a href="url">http://localhost:8080/smtp</a></li>
 </ul>
  
